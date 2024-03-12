@@ -82,7 +82,7 @@ class _FirstScreenState extends State<FirstScreen> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: SizedBox(
-              height: 420,
+              height: 500,
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
@@ -190,6 +190,67 @@ class _FirstScreenState extends State<FirstScreen> {
                   );
                 },
               ),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+            SizedBox(
+            height: 50,
+            child: CustomScrollView(
+              scrollDirection: Axis.horizontal,
+              slivers: [
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (BuildContext context, int index) {
+                      return GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            for (int i = 0; i < onclickcolor.length; i++) {
+                              if (i == index) {
+                                onclickcolor[i] = true;
+                              } else {
+                                onclickcolor[i] = false;
+                              }
+                            }
+                          });
+                        },
+                        child: Container(
+                          margin: const EdgeInsets.all(5),
+                          height: 20,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: onclickcolor[index]
+                                  ? [
+                                      themecolor.colorScheme.primary,
+                                      themecolor.colorScheme.primary,
+                                      themecolor.colorScheme.secondary,
+                                    ]
+                                  : [
+                                      themecolor.colorScheme.background,
+                                      themecolor.colorScheme.background,
+                                    ],
+                              stops: onclickcolor[index]
+                                  ? const [0, 0.5, 1]
+                                  : const [0, 1],
+                              begin: Alignment.bottomLeft,
+                              end: Alignment.topRight,
+                            ),
+                            borderRadius: BorderRadius.circular(40),
+                          ),
+                          child: Center(
+                            child: FittedBox(
+                              child: Text(names[index]),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                    childCount: names.length,
+                  ),
+                ),
+              ],
             ),
           ),
           const SizedBox(

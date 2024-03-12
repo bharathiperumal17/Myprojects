@@ -530,6 +530,228 @@ class _SecondScreenState extends State<SecondScreen> {
               )
             ],
           ),
+           const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 50,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.battery_saver,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'Battery',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.notes_outlined,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'menu',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.mobile_off_sharp,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'Lock',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+           const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 50,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.battery_saver,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'Battery',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.notes_outlined,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'menu',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.mobile_off_sharp,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'Lock',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+           const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                height: 50,
+                width: 130,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.battery_saver,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'Battery',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 70,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.notes_outlined,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'menu',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                height: 50,
+                width: 120,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20), top: Radius.circular(20)),
+                  color: themecolor.colorScheme.background,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Icon(
+                      Icons.mobile_off_sharp,
+                      color: themecolor.colorScheme.primary,
+                    ),
+                    const Text(
+                      'Lock',
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
           const SizedBox(
             height: 30,
           ),
