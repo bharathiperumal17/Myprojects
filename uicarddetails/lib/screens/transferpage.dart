@@ -1,5 +1,6 @@
 import 'package:accountui/model/heading.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TransferPage extends StatefulWidget {
@@ -52,7 +53,6 @@ class _TransferPageState extends State<TransferPage> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
           ),
-         
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -238,14 +238,13 @@ class _TransferPageState extends State<TransferPage> {
           const SizedBox(
             height: 10,
           ),
-       const   Padding(
-            padding:  EdgeInsets.all(8.0),
-            child:  Text(
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
               'Favorite',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
           ),
-         
           Expanded(
             // height: 300,
             child: ListView.separated(
@@ -259,6 +258,46 @@ class _TransferPageState extends State<TransferPage> {
                   ),
                   title: Text(people[index]['name'].toString()),
                   subtitle: Text(people[index]['job'].toString()),
+                  trailing: SizedBox(
+                    width: 70,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            '**** ',
+                            style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold, letterSpacing: 2),
+                          ),
+                          Text(
+                            '0705',
+                            style: TextStyle(fontSize: 14, letterSpacing: -1),
+                          ),
+                        ],
+                      ),
+                        Stack(
+                        clipBehavior: Clip.none,
+                        alignment:Alignment.center ,
+                        children: [
+                          const CircleAvatar(
+                            backgroundColor: Colors.red,
+                            radius: 8,
+                          ),
+                          Positioned(
+                            left: 10,
+                            child: CircleAvatar(
+                              backgroundColor:
+                                  Colors.orange.withOpacity(0.85),
+                              radius: 8,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ]),
+                  ),
                 );
               },
             ),
