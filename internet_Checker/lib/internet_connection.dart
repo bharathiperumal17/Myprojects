@@ -10,17 +10,19 @@ class NetworkController extends GetxController {
       bool hasNoConnection =
           connectivityResult.contains(ConnectivityResult.none);
       if (hasNoConnection) {
-        Get.to(const NoInternetScreen()); 
+        Get.to(const NoInternetScreen());
+        showNoConnectionSnackbar();
       } else {
         // Close any open NoInternetScreen (optional)
-        Get.back<NoInternetScreen>();
+        closeSnackbarIfOpen();
       }
     } else if (connectivityResult is ConnectivityResult) {
       if (connectivityResult == ConnectivityResult.none) {
-        Get.to(const NoInternetScreen()); 
+        Get.to(const NoInternetScreen());
+        showNoConnectionSnackbar();
       } else {
         // Close any open NoInternetScreen (optional)
-        Get.back<NoInternetScreen>();
+        closeSnackbarIfOpen();
       }
     } else {
       print('Unexpected data type received: $connectivityResult');
@@ -30,24 +32,32 @@ class NetworkController extends GetxController {
   void showNoConnectionSnackbar() {
     if (!Get.isSnackbarOpen) {
       Get.rawSnackbar(
-          message: 'No Internet Connection',
-          isDismissible: false,
-          duration: null,
-          backgroundColor: Colors.red,
-          margin: const EdgeInsets.all(20),
-          snackStyle: SnackStyle.FLOATING,
-          mainButton:
-              ElevatedButton(onPressed: okButton, child: const Text('Ok')));
+        message: 'No Internet Connection',
+        isDismissible: false,
+        duration: null,
+        backgroundColor: Colors.red,
+        margin: const EdgeInsets.all(20),
+        snackStyle: SnackStyle.FLOATING,
+      );
     }
-  }
-
-  okButton() {
-    showNoConnectionSnackbar();
   }
 
   void closeSnackbarIfOpen() {
     if (Get.isSnackbarOpen) {
       Get.closeAllSnackbars();
+      Get.rawSnackbar(
+        message: 'Network connected',
+        isDismissible: true,
+        duration: null,
+        backgroundColor: Colors.blue,
+        margin: const EdgeInsets.all(20),
+        mainButton: TextButton(
+            onPressed: () {
+              Get.back<NoInternetScreen>();
+            },
+            child: const Text('ok')),
+        snackStyle: SnackStyle.FLOATING,
+      );
     }
   }
 
@@ -71,6 +81,9 @@ class NoInternetScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(child: Image.asset('asset/image/images.jpeg')),
+    );
   }
 }
